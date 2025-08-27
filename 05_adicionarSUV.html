@@ -9,11 +9,16 @@
     */
 
     //ENTRADA
-
+let carro = prompt("Qual carro deseja adicionar na lista?\n\n(modelos da lista: Tiggo, Sportage, Tucson, EcoSport)").trim().toLowerCase();
+    while (carro === "tiggo" || carro === "sportage" || carro === "tucson" || carro === "ecosport") {
+        alert("Escolha um modelo que não esteja na lista!");
+        carro = prompt("Qual carro deseja adicionar na lista?\n\n(modelos da lista: Tiggo, Sportage, Tucson, EcoSport)").trim().toLowerCase();
+    }
 
     //PROCESSAMENTO
-
-
+let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+let listaNova = ([...carrosSUV]);
+listaNova.push(carro);
     //SAÍDA
-
+alert("A lista antiga era: " +carrosSUV.join(" - ")+ "\n\nAgora a nova lista será: " +listaNova.join(" - "));
 </script>
